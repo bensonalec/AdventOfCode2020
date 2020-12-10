@@ -1,6 +1,3 @@
-import itertools
-from typing import List
-
 with open("dayTen.txt") as fi:
     readIn = fi.readlines()
 
