@@ -83,11 +83,11 @@ def partTwo(newRules,your,neList,ruleNames):
     sorte = dict(sorted(rulesDic.items(), key=lambda item: len(item[1]),reverse=True))
     found = []
     order = []
-    for i in sorte.keys():
-        for val in Diff(sorte[i],list(range(0,20))):
+    for key,value in sorte.items():
+        for val in Diff(value,list(range(0,20))):
             if(val not in found):
                 found.append(val)
-                order.append((val,i))
+                order.append((val,key))
                 break
     final = sorted(order, key=lambda item: item[0])
     finalValue = 1
