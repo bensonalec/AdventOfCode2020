@@ -10,10 +10,8 @@ def preProcess(inp):
     return pOne,pTwo
 
 def partOne(pOne,pTwo):
-    # print(pOne,pTwo)
     count = 0
     while(len(pOne) > 0 and len(pTwo) > 0):
-        # print(pOne,pTwo)
         valueOne = pOne.pop(0)
         valueTwo = pTwo.pop(0)
         if(valueOne > valueTwo):
