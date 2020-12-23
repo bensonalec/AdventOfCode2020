@@ -1,9 +1,9 @@
 import functools
+from tqdm import tqdm
+
 inp = list("476138259")
 inp = [int(x) for x in inp]
-#build the million cups...
 latest = max(inp)
-# print(latest)
 while(latest < 1000000):
     latest+=1
     inp.append(latest)
@@ -38,8 +38,6 @@ def executeRound(currentInp,previous,ind):
     previous = currentInp[currentCup]
     return currentInp,previous
 
-import copy
-from tqdm import tqdm
 currentInp = copy.deepcopy(inp)
 previous = currentInp[0]
 for ind,i in tqdm(enumerate(range(10000000))):
