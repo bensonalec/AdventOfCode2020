@@ -18,7 +18,6 @@ for line in lines:
             toLook = inpLine[0]
             directionsArray.append(toLook)
             inpLine = inpLine[1:]
-    # print(directionsArray)
     for d in directionsArray:
         if(d == "e"):
             init[0] += 1
@@ -45,13 +44,11 @@ count = 0
 for i in values:
     if(i):
         count += 1
-# print(count)
 
 def countNeighbors(coord, currentCount):
     options = [[1,-1,0],[1,0,-1],[0,1,-1],[-1,1,0],[-1,0,1],[0,-1,1]]
     neighbors = 0
     for i in options:
-        # if currentCount[(coord[0]+i[0],coord[1]+i[1],coord[2]+i[2])] == True:
         neighbors += currentCount[(coord[0]+i[0],coord[1]+i[1],coord[2]+i[2])]
     return neighbors
 from tqdm import tqdm
